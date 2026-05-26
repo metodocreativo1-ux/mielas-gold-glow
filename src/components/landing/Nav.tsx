@@ -1,13 +1,16 @@
+import logo from "@/assets/mielas-logo.png";
+
 export function Nav() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-ink/80 backdrop-blur-md border-b border-white/5">
       <nav className="max-w-[1400px] mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
-        <a href="#top" className="flex flex-col leading-none">
-          <span className="font-display text-2xl tracking-[0.18em]">
-            <span className="text-gold">M</span>
-            <span className="text-cream">IELAS</span>
-          </span>
-          <span className="text-[0.6rem] tracking-[0.35em] uppercase text-tan mt-0.5">Hair Design</span>
+        <a href="#top" className="flex items-center leading-none" aria-label="Mielas Hair Design">
+          <img
+            src={logo}
+            alt="Mielas Hair Design"
+            className="h-12 md:h-14 w-auto invert"
+            loading="eager"
+          />
         </a>
         <a
           href="#precio"
