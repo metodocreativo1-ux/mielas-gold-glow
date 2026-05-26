@@ -28,7 +28,7 @@ export function Precio() {
 
         <a
           href="SHOPIFY_PAYMENT_LINK"
-          className="mt-10 inline-flex w-full sm:w-auto items-center justify-center gap-3 bg-gold text-ink hover:bg-cream transition-colors px-12 py-5 text-xs tracking-[0.3em] uppercase font-medium"
+          className="mt-10 inline-flex w-full sm:w-auto items-center justify-center gap-3 bg-gold text-ink hover:bg-cream transition-colors gold-glow px-12 py-5 text-xs tracking-[0.3em] uppercase font-medium"
         >
           Quiero inscribirme ahora →
         </a>

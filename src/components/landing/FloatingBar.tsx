@@ -6,7 +6,7 @@ export function FloatingBar() {
         <span className="font-display text-gold text-lg md:text-xl">$600.000 <span className="text-tan text-xs tracking-[0.2em] uppercase">ARS</span></span>
         <a
           href="#precio"
-          className="bg-gold text-ink hover:bg-cream transition-colors px-5 py-2.5 text-[0.65rem] md:text-xs tracking-[0.25em] uppercase font-medium"
+          className="bg-gold text-ink hover:bg-cream transition-colors gold-glow px-5 py-2.5 text-[0.65rem] md:text-xs tracking-[0.25em] uppercase font-medium"
         >
           Inscribirme
         </a>

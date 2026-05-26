@@ -192,4 +192,28 @@
     text-transform: uppercase;
     color: var(--gold);
   }
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+  .gold-glow {
+    transition: text-shadow 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  }
+  .gold-glow:hover {
+    text-shadow: 0 0 14px color-mix(in oklab, var(--gold) 55%, transparent);
+    filter: drop-shadow(0 0 6px color-mix(in oklab, var(--gold) 40%, transparent));
+  }
+  .bg-gold.gold-glow:hover {
+    box-shadow: 0 0 24px color-mix(in oklab, var(--gold) 45%, transparent);
+    text-shadow: none;
+  }
 }
