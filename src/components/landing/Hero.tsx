@@ -9,11 +9,11 @@ export function Hero() {
             <span className="block w-12 h-px bg-gold" />
             <span className="eyebrow">Mielas Hair Design presenta</span>
           </div>
-          <h1 className="font-display text-5xl md:text-7xl leading-[1.05] text-cream">
-            La <em className="text-gold not-italic font-light italic">Alquimia</em>
+          <h1 className="font-display font-light text-6xl md:text-[80px] leading-[1.02] tracking-[-0.015em] text-cream">
+            La <em className="text-gold font-light italic">Alquimia</em>
             <br /> del Color
           </h1>
-          <p className="mt-8 text-cream/70 text-lg leading-relaxed font-light">
+          <p className="mt-8 text-cream/70 text-lg leading-[1.8] font-light">
             Mega formación profesional que une ciencia, diagnóstico y técnica para transformar el color desde su esencia.
           </p>
 
