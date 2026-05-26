@@ -46,7 +46,7 @@ export function Hero() {
           alt="La Alquimia del Color"
           width={1024}
           height={1408}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-[center_top]"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-transparent to-transparent" />
       </div>
