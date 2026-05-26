@@ -8,7 +8,7 @@ export function Nav() {
           <img
             src={logo}
             alt="Mielas Hair Design"
-            className="h-12 md:h-14 w-auto invert"
+            className="h-20 md:h-24 w-auto invert"
             loading="eager"
           />
         </a>
