@@ -8,6 +8,7 @@ import { SobrePamela } from "@/components/landing/SobrePamela";
 import { Precio } from "@/components/landing/Precio";
 import { Footer } from "@/components/landing/Footer";
 import { FloatingBar } from "@/components/landing/FloatingBar";
+import { Reveal } from "@/components/landing/Reveal";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -19,11 +20,11 @@ function Index() {
       <Nav />
       <main>
         <Hero />
-        <ParaQuien />
-        <Aprender />
-        <Programa />
-        <SobrePamela />
-        <Precio />
+        <Reveal><ParaQuien /></Reveal>
+        <Reveal><Aprender /></Reveal>
+        <Reveal><Programa /></Reveal>
+        <Reveal><SobrePamela /></Reveal>
+        <Reveal><Precio /></Reveal>
       </main>
       <Footer />
       <FloatingBar />
