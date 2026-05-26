@@ -32,7 +32,7 @@ export function Hero() {
 
           <a
             href="#precio"
-            className="mt-10 inline-flex items-center gap-3 bg-gold text-ink hover:bg-cream transition-colors px-8 py-4 text-xs tracking-[0.3em] uppercase font-medium"
+            className="mt-10 inline-flex items-center gap-3 bg-gold text-ink hover:bg-cream transition-colors gold-glow px-8 py-4 text-xs tracking-[0.3em] uppercase font-medium"
           >
             Reservar mi lugar
             <span className="text-base">→</span>
