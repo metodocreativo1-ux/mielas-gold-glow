@@ -76,10 +76,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Mega formación profesional online de colorimetría capilar. 7 módulos, bonus de alisado y clases prácticas con Pamela Mielas." },
       { name: "author", content: "Mielas Hair Design" },
       { property: "og:title", content: "La Alquimia del Color — Mielas Hair Design" },
-      { property: "og:description", content: "Formación profesional online de colorimetría capilar por Pamela Mielas." },
+      { property: "og:description", content: "Mega formación profesional online de colorimetría capilar. 7 módulos, bonus de alisado y clases prácticas con Pamela Mielas." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "La Alquimia del Color — Mielas Hair Design" },
+      { name: "twitter:description", content: "Mega formación profesional online de colorimetría capilar. 7 módulos, bonus de alisado y clases prácticas con Pamela Mielas." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/eb8b4139-dc0b-482e-bdc1-d64d51aefe6e/id-preview-2618a11a--726f552f-9662-4f71-bf08-6f6e6ed4fe2d.lovable.app-1779812054428.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/eb8b4139-dc0b-482e-bdc1-d64d51aefe6e/id-preview-2618a11a--726f552f-9662-4f71-bf08-6f6e6ed4fe2d.lovable.app-1779812054428.png" },
     ],
     links: [
       {
