@@ -5,7 +5,7 @@ export function SectionHeader({ eyebrow, title, subtitle }: { eyebrow: string; t
         <span className="block w-12 h-px bg-gold" />
         <span className="eyebrow">{eyebrow}</span>
       </div>
-      <h2 className="font-display text-4xl md:text-5xl text-cream leading-[1.1]">{title}</h2>
+      <h2 className="font-display font-light text-5xl md:text-6xl text-cream leading-[1.05] tracking-[-0.01em]">{title}</h2>
       {subtitle && <p className="mt-5 text-cream/60 text-lg font-light">{subtitle}</p>}
     </div>
   );

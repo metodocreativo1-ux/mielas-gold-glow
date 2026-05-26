@@ -21,7 +21,7 @@ export function SobrePamela() {
             <span className="eyebrow">Tu instructora</span>
           </div>
           <h2 className="font-display text-5xl md:text-6xl text-cream leading-tight">
-            Pamela <em className="text-gold not-italic italic font-light">Mielas</em>
+            Pamela <em className="text-gold italic font-light">Mielas</em>
           </h2>
           <p className="mt-3 text-tan tracking-[0.2em] uppercase text-xs">Colorista & Fundadora de Mielas Hair Design</p>
           <p className="mt-8 text-cream/70 font-light leading-relaxed">

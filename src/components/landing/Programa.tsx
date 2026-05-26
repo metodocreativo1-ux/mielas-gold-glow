@@ -22,7 +22,7 @@ export function Programa() {
     <section className="bg-ink-alt py-24 md:py-32 px-6 md:px-16">
       <SectionHeader
         eyebrow="Programa"
-        title={<>El recorrido <em className="text-gold not-italic italic font-light">formativo</em></>}
+        title={<>El recorrido <em className="text-gold italic font-light">formativo</em></>}
         subtitle="7 módulos completos + bonus + clases prácticas con modelos reales"
       />
 
