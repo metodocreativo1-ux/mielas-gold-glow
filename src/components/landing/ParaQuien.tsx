@@ -1,17 +1,17 @@
 import { SectionHeader } from "./SectionHeader";
 
 const items = [
-  "Coloristas que buscan subir de nivel técnico",
-  "Estilistas que quieren comprender la fibra desde una mirada científica y estética",
-  "Profesionales que desean evitar daños y diagnosticar con mayor precisión",
-  "Quienes buscan dominar la luminosidad, el brillo y la corrección de color",
-  "Todo aquél que desee introducirse en colorimetría a partir de métodos y protocolos probados",
+  "Sos colorista y querés elevar tu nivel técnico trabajando con más seguridad, criterio y precisión.",
+  "Sos estilista y querés comprender la fibra capilar desde una mirada científica, química y estética.",
+  "Buscás evitar daños innecesarios y aprender a diagnosticar correctamente antes de cualquier proceso químico.",
+  "Querés dominar la luminosidad, el brillo, los fondos de aclaración y la corrección de color profesional.",
+  "Deseás introducirte en la colorimetría a través de métodos, protocolos y procesos reales comprobados en salón.",
 ];
 
 export function ParaQuien() {
   return (
     <section className="bg-ink-alt py-24 md:py-32 px-6 md:px-16">
-      <SectionHeader eyebrow="Para quién" title={<>¿A quién está dirigido?</>} />
+      <SectionHeader eyebrow="Para quién" title={<>Este curso es para vos si…</>} />
       <div className="mt-16 grid md:grid-cols-5 gap-px bg-gold/20">
         {items.map((text, i) => (
           <div key={i} className="bg-ink-alt p-8 flex flex-col">
