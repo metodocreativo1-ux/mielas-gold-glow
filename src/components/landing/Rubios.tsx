@@ -20,7 +20,7 @@ export function Rubios() {
               style={{ width: 320, height: 400 }}
             >
               <img
-                src={`/rubio-${n}.jpg`}
+                src={`/rubio-${n}.png`}
                 alt={`Resultado rubio ${n}`}
                 className="w-full h-full object-cover"
                 loading="lazy"
