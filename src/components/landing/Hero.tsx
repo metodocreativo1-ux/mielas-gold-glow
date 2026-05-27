@@ -13,8 +13,11 @@ export function Hero() {
             La <em className="text-gold font-light italic">Alquimia</em>
             <br /> del Color
           </h1>
-          <p className="mt-8 text-cream/70 text-lg leading-[1.8] font-light">
-            Mega formación profesional que une ciencia, diagnóstico y técnica para transformar el color desde su esencia.
+          <p className="mt-6 text-cream/85 text-xl md:text-2xl leading-[1.4] font-display italic">
+            Aprendé a diagnosticar, formular y transformar cabellos con seguridad profesional.
+          </p>
+          <p className="mt-6 text-cream/70 text-base leading-[1.8] font-light">
+            Una formación diseñada para estilistas que quieren dejar de improvisar el color y empezar a comprender el cabello, la química y la lógica detrás de cada resultado.
           </p>
 
           <div className="mt-10 border-y border-white/10 py-6 flex items-baseline gap-4">

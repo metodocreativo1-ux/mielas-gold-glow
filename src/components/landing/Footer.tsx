@@ -1,12 +1,14 @@
+import logo from "@/assets/mielas-logo.png";
+
 export function Footer() {
   return (
     <footer className="bg-ink border-t border-white/5 py-16 px-6 text-center">
-      <div className="flex flex-col items-center leading-none">
-        <span className="font-display text-3xl tracking-[0.18em]">
-          <span className="text-gold">M</span><span className="text-cream">IELAS</span>
-        </span>
-        <span className="text-[0.6rem] tracking-[0.35em] uppercase text-tan mt-1">Hair Design</span>
-      </div>
+      <img
+        src={logo}
+        alt="Mielas Hair Design"
+        className="h-[72px] md:h-[80px] w-auto invert mx-auto"
+        loading="lazy"
+      />
       <a
         href="https://instagram.com/mielas_pamela"
         target="_blank"
