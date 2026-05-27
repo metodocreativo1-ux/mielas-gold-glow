@@ -6,6 +6,11 @@ import { Aprender } from "@/components/landing/Aprender";
 import { Programa } from "@/components/landing/Programa";
 import { SobrePamela } from "@/components/landing/SobrePamela";
 import { Precio } from "@/components/landing/Precio";
+import { Rubios } from "@/components/landing/Rubios";
+import { Testimonios } from "@/components/landing/Testimonios";
+import { FAQ } from "@/components/landing/FAQ";
+import { CTAFinal } from "@/components/landing/CTAFinal";
+import { VideoTrailer } from "@/components/landing/VideoTrailer";
 import { Footer } from "@/components/landing/Footer";
 import { FloatingBar } from "@/components/landing/FloatingBar";
 import { Reveal } from "@/components/landing/Reveal";
@@ -24,7 +29,12 @@ function Index() {
         <Reveal><Aprender /></Reveal>
         <Reveal><Programa /></Reveal>
         <Reveal><SobrePamela /></Reveal>
+        <Reveal><Rubios /></Reveal>
+        <Reveal><Testimonios /></Reveal>
         <Reveal><Precio /></Reveal>
+        <Reveal><FAQ /></Reveal>
+        <Reveal><CTAFinal /></Reveal>
+        <Reveal><VideoTrailer /></Reveal>
       </main>
       <Footer />
       <FloatingBar />
