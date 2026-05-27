@@ -1,13 +1,13 @@
 import { SectionHeader } from "./SectionHeader";
 
-const modules = [
+const modules: Array<[string, string, string?]> = [
   ["01", "Estructura del Cabello y Diagnóstico"],
   ["02", "pH del Cabello"],
   ["03", "Colorimetría"],
   ["04", "Diagnóstico, Test de Mecha y Selección de Técnica"],
-  ["05", "El Universo de la Decoloración"],
-  ["06", "Mantenimiento, Fidelización y Continuidad"],
-  ["07", "Rentabilidad, Gestión y Monetización"],
+  ["05", "El Universo de la Decoloración", "Volúmenes y tiempos de exposición."],
+  ["06", "Mantenimiento del Rubio y Fidelización", "Mantener un rubio perfecto en el tiempo y lograr que esa clienta vuelva una y otra vez."],
+  ["07", "Rentabilidad, Gestión y Monetización del Talento", "Cómo vivir de tu talento con dignidad, claridad y proyección."],
 ];
 
 const practicas = [
@@ -27,10 +27,13 @@ export function Programa() {
       />
 
       <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
-        {modules.map(([num, title]) => (
+        {modules.map(([num, title, desc]) => (
           <div key={num} className="bg-ink p-8 group hover:bg-ink-alt transition-colors min-h-[200px] flex flex-col justify-between">
             <span className="eyebrow text-tan">Módulo {num}</span>
-            <h3 className="font-display text-2xl text-cream mt-4 group-hover:text-gold transition-colors">{title}</h3>
+            <div className="mt-4">
+              <h3 className="font-display text-2xl text-cream group-hover:text-gold transition-colors">{title}</h3>
+              {desc && <p className="mt-3 text-cream/60 text-sm font-light leading-relaxed">{desc}</p>}
+            </div>
           </div>
         ))}
         <div className="bg-ink p-8 border border-gold relative min-h-[200px] flex flex-col justify-between">

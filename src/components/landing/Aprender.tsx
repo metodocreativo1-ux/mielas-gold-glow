@@ -1,31 +1,25 @@
 import { SectionHeader } from "./SectionHeader";
 
 const items = [
-  ["Estructura del cabello", "Fibras, enlaces y composición capilar"],
-  ["pH y química", "Su impacto en todos los procesos de coloración"],
-  ["Colorimetría completa", "Clasificación, neutralización y manejo de pigmentos"],
-  ["Fondos de aclaración", "Lectura del pigmento residual y su gestión"],
-  ["Diagnóstico profesional", "Test de mecha real y selección de técnica"],
-  ["Técnica gorra microstrong", "Procedimiento paso a paso"],
-  ["Empapelado con peine funil y peinqueta", "Técnica precisa de alto nivel"],
-  ["Alisados", "Química, riesgos y decisiones técnicas informadas"],
-  ["Mantenimiento y fidelización", "Protocolos post-proceso"],
-  ["Rentabilidad", "Cómo monetizar y gestionar tu servicio"],
-  ["Prácticas reales con modelos", "Aplicación en situaciones reales"],
+  "Comprender la lógica real de la coloración",
+  "Diagnosticar correctamente antes de cualquier proceso químico",
+  "Entender fondos de aclaración y pigmentos residuales",
+  "Crear rubios más limpios y duraderos",
+  "Trabajar con más seguridad y criterio técnico",
+  "Aprender protocolos reales de decoloración segura",
+  "Mejorar la calidad de tus resultados",
+  "Generar más confianza en tus clientas",
 ];
 
 export function Aprender() {
   return (
     <section className="bg-ink py-24 md:py-32 px-6 md:px-16">
-      <SectionHeader eyebrow="Contenido" title={<>Qué vas a aprender</>} />
-      <div className="mt-16 grid md:grid-cols-2 gap-x-16 gap-y-10">
-        {items.map(([title, desc], i) => (
-          <div key={i} className="flex gap-5 border-b border-white/5 pb-8">
-            <span className="text-gold text-xl leading-none mt-1">✦</span>
-            <div>
-              <h3 className="font-display text-2xl text-cream mb-1">{title}</h3>
-              <p className="text-cream/55 text-sm font-light leading-relaxed">{desc}</p>
-            </div>
+      <SectionHeader eyebrow="Resultados" title={<>Qué vas a lograr con esta formación</>} />
+      <div className="mt-16 grid md:grid-cols-2 gap-x-16 gap-y-8">
+        {items.map((text, i) => (
+          <div key={i} className="flex gap-5 border-b border-white/5 pb-6">
+            <span className="text-gold text-2xl leading-none mt-0.5">✨</span>
+            <p className="text-cream/85 font-display text-xl md:text-2xl leading-snug">{text}</p>
           </div>
         ))}
       </div>
