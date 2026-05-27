@@ -1,5 +1,5 @@
 const includes = [
-  "7 módulos completos en video (acceso de por vida)",
+  "7 módulos completos en video (acceso por 12 meses)",
   "Bonus: Alisado Químico — módulo exclusivo",
   "Módulo de clases prácticas con modelos reales",
   "Teoría avanzada + diagnóstico + técnica",
@@ -14,6 +14,9 @@ export function Precio() {
         <span className="eyebrow">Inversión</span>
         <div className="mt-8 text-cream/40 line-through text-lg">$900.000 ARS</div>
         <p className="text-tan tracking-[0.3em] uppercase text-[0.65rem] mt-2">Precio de lanzamiento</p>
+        <div className="mt-5 inline-block border border-gold/50 px-3 py-1.5 text-gold text-[0.6rem] tracking-[0.25em] uppercase">
+          Precio promocional por tiempo limitado
+        </div>
         <div className="font-display text-7xl md:text-8xl text-gold mt-4 leading-none">$600.000</div>
         <p className="mt-3 text-cream/60 text-sm">Pesos argentinos · Pago único</p>
 
@@ -33,7 +36,7 @@ export function Precio() {
           Quiero inscribirme ahora →
         </a>
         <p className="mt-6 text-tan/70 text-xs tracking-[0.15em]">
-          Acceso online · Aprendé a tu ritmo · Sin fecha de vencimiento
+          Acceso online · Aprendé a tu ritmo · Acceso por 12 meses
         </p>
       </div>
     </section>
