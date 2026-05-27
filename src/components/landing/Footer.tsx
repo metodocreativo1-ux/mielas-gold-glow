@@ -6,7 +6,7 @@ export function Footer() {
       <img
         src={logo}
         alt="Mielas Hair Design"
-        className="h-[72px] md:h-[80px] w-auto invert mx-auto"
+        className="h-[100px] md:h-[120px] w-auto invert mx-auto"
         loading="lazy"
       />
       <a
