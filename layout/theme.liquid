@@ -12,11 +12,24 @@
 </head>
 <body>
   {{ content_for_layout }}
+
+  <div id="floatingBar" class="floating-bar">
+    <span class="floating-text">¿Lista para transformar tu técnica?</span>
+    <a href="/cart/52102418530606:1" class="btn floating-btn">Quiero inscribirme →</a>
+  </div>
+
   <script>
-    window.addEventListener('scroll', function () {
+    (function() {
       var bar = document.getElementById('floatingBar');
-      if (bar) bar.classList.toggle('visible', window.scrollY > 400);
-    }, { passive: true });
+      if (!bar) return;
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 400) {
+          bar.classList.add('visible');
+        } else {
+          bar.classList.remove('visible');
+        }
+      });
+    })();
   </script>
 </body>
 </html>
