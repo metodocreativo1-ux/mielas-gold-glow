@@ -894,18 +894,11 @@
     }
 
     .logro-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      padding: 20px 0;
-      border-bottom: 1px solid rgba(175,150,96,0.1);
-    }
-
-    .logro-item p {
-      font-family: var(--font-body);
-      font-size: 15px;
-      font-weight: 300;
-      color: var(--cream);
+      padding: 16px 20px;
+      border: 1px solid rgba(175, 150, 96, 0.2);
+      color: #DDD1CC;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
       line-height: 1.5;
     }
 
