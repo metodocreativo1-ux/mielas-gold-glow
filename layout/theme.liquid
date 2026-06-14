@@ -44,7 +44,7 @@
       if (!track) return;
       var current = 0;
       var total = track.children.length;
-      function perView() { return window.innerWidth < 768 ? 1 : 3; }
+      function perView() { return window.innerWidth <= 768 ? 1 : 3; }
       function update() {
         var n = perView();
         var max = total - n;
@@ -55,6 +55,26 @@
       var next = document.querySelector('.carousel-next');
       if (prev) prev.addEventListener('click', function() { if (current > 0) { current--; update(); } });
       if (next) next.addEventListener('click', function() { if (current < total - perView()) { current++; update(); } });
+      var wrapper = track.closest('.carousel-wrapper');
+      var touchStartX = 0;
+      var touchStartY = 0;
+      if (wrapper) {
+        wrapper.addEventListener('touchstart', function(event) {
+          if (!event.touches.length) return;
+          touchStartX = event.touches[0].clientX;
+          touchStartY = event.touches[0].clientY;
+        }, { passive: true });
+
+        wrapper.addEventListener('touchend', function(event) {
+          if (!event.changedTouches.length) return;
+          var dx = event.changedTouches[0].clientX - touchStartX;
+          var dy = event.changedTouches[0].clientY - touchStartY;
+          if (Math.abs(dx) < 45 || Math.abs(dx) < Math.abs(dy)) return;
+          if (dx < 0 && current < total - perView()) current++;
+          if (dx > 0 && current > 0) current--;
+          update();
+        }, { passive: true });
+      }
       window.addEventListener('resize', update, { passive: true });
     })();
 

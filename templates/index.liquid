@@ -4,8 +4,8 @@
 ══════════════════════════════════════════ -->
 <nav>
 <a href="/" class="nav-logo">
-<div style="width:130px;height:auto;flex-shrink:0;overflow:visible;">
-<img src="{{ 'logo-mielas.png' | asset_url }}" alt="Mielas Hair Design" class="logo-img" width="130" style="width:100%!important;max-width:none!important;height:auto!important;display:block!important;filter:brightness(0) invert(1);">
+<div class="nav-logo-frame">
+<img src="{{ 'logo-mielas.png' | asset_url }}" alt="Mielas Hair Design" class="logo-img" width="130">
 </div>
 </a>
 <a class="btn" href="/cart/52102418530606:1">Quiero inscribirme</a>
@@ -67,11 +67,11 @@
 <!-- ══════════════════════════════════════════
      QUÉ VAS A LOGRAR — TU TRANSFORMACIÓN PROFESIONAL
 ══════════════════════════════════════════ -->
-<section id="logros" style="padding: 80px 24px; background: #0d0b08;">
-  <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+<section id="logros">
+  <div class="logros-container">
     <span class="eyebrow">Tu transformación profesional</span>
-    <h2 style="font-family: 'Cormorant Garant', serif; font-size: clamp(2rem,4vw,3rem); color: #DDD1CC; margin: 24px 0 48px;">Qué vas a lograr con esta <em style="color: #AF9660;">formación</em></h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; text-align: left;">
+    <h2 class="logros-title">Qué vas a lograr con esta <em>formación</em></h2>
+    <div class="logros-grid">
       <div class="logro-item">· Comprender la lógica real de la coloración</div>
       <div class="logro-item">· Diagnosticar correctamente antes de cualquier proceso químico</div>
       <div class="logro-item">· Entender fondos de aclaración y pigmentos residuales</div>
@@ -104,11 +104,11 @@
 <p>A lo largo de su carrera se ha especializado en técnicas de iluminación, decoloración segura, corrección de color, cobertura de canas y tratamientos de reconstrucción capilar, integrando conocimientos de química cosmética y comportamiento estructural del cabello para abordar cada proceso desde una mirada técnica, estratégica y consciente.</p>
 <p>Su trabajo se caracteriza por combinar:</p>
 <ul class="pamela-lista">
-<li>· Diagnóstico capilar</li>
-<li>· Diseño de luz y sombra</li>
-<li>· Control de fondos de aclaración</li>
-<li>· Neutralización de pigmentos residuales</li>
-<li>· Protocolos seguros de decoloración</li>
+<li>Diagnóstico capilar</li>
+<li>Diseño de luz y sombra</li>
+<li>Control de fondos de aclaración</li>
+<li>Neutralización de pigmentos residuales</li>
+<li>Protocolos seguros de decoloración</li>
 </ul>
 <p>Además de su experiencia en salón, Pamela se ha enfocado en la formación de profesionales, compartiendo conocimientos técnicos y prácticos con estilistas que buscan elevar su nivel profesional y convertirse en referentes dentro de la industria del color.</p>
 <p>Es creadora de <em>"La Alquimia del Color"</em>, una formación especializada diseñada para enseñar colorimetría, decoloración y transformación capilar desde una perspectiva profunda, profesional y estructural, ayudando a otros estilistas a dejar de trabajar por repetición y comenzar a trabajar con criterio técnico.</p>
@@ -141,17 +141,17 @@
 <!-- ══════════════════════════════════════════
      POR QUÉ NACE LA ALQUIMIA DEL COLOR
 ══════════════════════════════════════════ -->
-<section id="por-que-nace" style="padding: 80px 24px; background: #111111;">
-  <div style="max-width: 760px; margin: 0 auto; text-align: center;">
-    <span class="section-label" style="display:block;margin-bottom:24px;">El origen</span>
-    <h2 style="font-family:'Cormorant Garant',serif; font-size:clamp(1.8rem,3.5vw,2.8rem); color:#DDD1CC; font-weight:300; margin-bottom:40px;">
-      Por qué nace <em style="color:#AF9660; font-style:italic;">La Alquimia del Color</em>
+<section id="por-que-nace">
+  <div class="origen-container">
+    <span class="section-label">El origen</span>
+    <h2 class="origen-title">
+      Por qué nace <em>La Alquimia del Color</em>
     </h2>
-    <div style="border-left:2px solid #AF9660; padding-left:28px; text-align:left;">
-      <p style="color:rgba(221,209,204,0.8); font-weight:300; font-size:1.05rem; line-height:1.8; margin-bottom:20px;">
+    <div class="origen-copy">
+      <p>
         Creé esta formación porque vi demasiados profesionales trabajando por repetición, dañando cabello y sintiéndose inseguros al formular.
       </p>
-      <p style="font-family:'Cormorant Garant',serif; font-style:italic; color:#DDD1CC; font-size:clamp(1.2rem,2.5vw,1.6rem); line-height:1.5;">
+      <p class="origen-quote">
         La Alquimia del Color nace para transformar la intuición en criterio técnico.
       </p>
     </div>
@@ -359,20 +359,19 @@
 <!-- ══════════════════════════════════════════
      TE DOY LA BIENVENIDA — VIDEO
 ══════════════════════════════════════════ -->
-<section id="bienvenida" style="padding: 80px 24px; background: #080808;">
-  <div style="max-width: 720px; margin: 0 auto; text-align: center;">
-    <div style="display:flex; align-items:center; justify-content:center; gap:16px; margin-bottom:32px;">
-      <span style="display:block;width:48px;height:1px;background:#AF9660;"></span>
+<section id="bienvenida">
+  <div class="bienvenida-container">
+    <div class="bienvenida-kicker">
+      <span></span>
       <span class="section-label">Te doy la bienvenida</span>
-      <span style="display:block;width:48px;height:1px;background:#AF9660;"></span>
+      <span></span>
     </div>
     {%- assign video_url = 'https://cdn.shopify.com/videos/c/o/v/05c9364a134d46f0a26ab6bcde37b874.mp4' -%}
-    <div style="position:relative; width:100%; aspect-ratio:16/9; border:1px solid rgba(175,150,96,0.5); background:#111; overflow:hidden;">
+    <div class="bienvenida-video">
       <video
         src="{{ video_url }}"
         controls
         preload="auto"
-        style="width:100%; height:100%; object-fit:cover;"
       ></video>
     </div>
   </div>
@@ -382,7 +381,7 @@
 ══════════════════════════════════════════ -->
 <section id="cta-final">
 <div class="container cta-final-content">
-<h2 class="cta-final-headline">El color no se memoriza.<br/>Se comprende.</h2>
+<h2 class="cta-final-headline"><span>El color no se memoriza.</span><span>Se comprende.</span></h2>
 <p class="cta-final-sub">Este puede ser el momento que transforme tu manera de trabajar para siempre.</p>
 <a class="btn btn-filled btn-lg" href="/cart/52102418530606:1">QUIERO INSCRIBIRME</a>
 </div>
@@ -391,10 +390,10 @@
      FOOTER
 ══════════════════════════════════════════ -->
 <footer>
-<div class="footer-logo" style="text-align:center;">
-<img src="{{ 'logo-mielas.png' | asset_url }}" alt="Mielas Hair Design" class="logo-img footer-logo-img" style="width:130px!important;height:auto!important;min-width:130px;margin:0 auto;display:block;filter:brightness(0) invert(1);">
+<div class="footer-logo">
+<img src="{{ 'logo-mielas.png' | asset_url }}" alt="Mielas Hair Design" class="logo-img footer-logo-img">
 </div>
-<p style="text-align:center;">
+<p>
     La Alquimia del Color · Mielas Hair Design<br/>
 <a href="https://instagram.com/mielas_pamela">@mielas_pamela</a>
 </p>

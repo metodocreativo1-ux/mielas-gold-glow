@@ -89,6 +89,13 @@
       text-decoration: none;
     }
 
+    .nav-logo-frame {
+      width: 130px;
+      height: auto;
+      flex-shrink: 0;
+      overflow: visible;
+    }
+
     .logo-img {
       width: 130px;
       height: auto;
@@ -99,6 +106,8 @@
     .footer-logo-img {
       width: 130px;
       height: auto;
+      min-width: 130px;
+      margin: 0 auto;
     }
 
     .nav-logo .M {
@@ -129,7 +138,7 @@
       color: var(--gold);
       background: transparent;
       cursor: pointer;
-      transition: background 0.25s, color 0.25s;
+      transition: background 0.25s, color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
     }
 
     .btn:hover {
@@ -146,6 +155,8 @@
     .btn-filled:hover {
       background: var(--tan);
       border-color: var(--tan);
+      box-shadow: 0 0 28px rgba(175,150,96,0.24);
+      transform: translateY(-1px);
     }
 
     .btn-lg {
@@ -181,6 +192,7 @@
       margin: 0 auto;
       position: relative;
       z-index: 2;
+      animation: heroIn 0.7s ease-out both;
     }
 
     .hero-brand {
@@ -225,7 +237,7 @@
       font-weight: 300;
       font-style: italic;
       color: var(--tan);
-      margin: 24px 0 32px;
+      margin: 28px 0 34px;
       line-height: 1.5;
       max-width: 440px;
     }
@@ -276,7 +288,17 @@
       flex-wrap: wrap;
       gap: 10px;
       margin-top: 28px;
-      margin-bottom: 36px;
+      margin-bottom: 30px;
+    }
+
+    .hero-badges::after {
+      content: '';
+      display: block;
+      flex-basis: 100%;
+      width: 112px;
+      height: 1px;
+      background: rgba(175,150,96,0.45);
+      margin-top: 14px;
     }
 
     .badge {
@@ -309,6 +331,17 @@
       position: absolute;
       inset: 0;
       background: linear-gradient(to right, #080808 0%, transparent 30%);
+    }
+
+    @keyframes heroIn {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* ─── PARA QUIÉN ─────────────────────────────────────────── */
@@ -363,58 +396,6 @@
       line-height: 1.6;
       color: var(--cream);
       font-weight: 300;
-    }
-
-    /* ─── QUÉ APRENDERÁS ─────────────────────────────────────── */
-    #aprender {
-      padding: 100px 0;
-      background: var(--bg);
-    }
-
-    .aprender-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0;
-      border: 1px solid rgba(175,150,96,0.15);
-    }
-
-    .aprender-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      padding: 24px 28px;
-      border-bottom: 1px solid rgba(175,150,96,0.1);
-      border-right: 1px solid rgba(175,150,96,0.1);
-    }
-
-    .aprender-item:nth-child(2n) {
-      border-right: none;
-    }
-
-    .aprender-item:nth-last-child(-n+2) {
-      border-bottom: none;
-    }
-
-    .aprender-check {
-      color: var(--gold);
-      font-size: 18px;
-      line-height: 1;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .aprender-item p {
-      font-size: 14px;
-      font-weight: 300;
-      color: var(--cream);
-      line-height: 1.5;
-    }
-
-    .aprender-item strong {
-      font-weight: 500;
-      color: var(--tan);
-      display: block;
-      margin-bottom: 2px;
     }
 
     /* ─── PROGRAMA ───────────────────────────────────────────── */
@@ -608,7 +589,7 @@
     }
 
     .pamela-bio p + p {
-      margin-top: 16px;
+      margin-top: 18px;
     }
 
     .pamela-stats {
@@ -780,7 +761,17 @@
       letter-spacing: 0.15em;
       color: var(--cream);
       text-transform: uppercase;
-      margin-bottom: 4px;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    .footer-logo::after {
+      content: '';
+      display: block;
+      width: 56px;
+      height: 1px;
+      background: rgba(175,150,96,0.55);
+      margin: 18px auto 0;
     }
 
     .footer-logo .M { color: var(--gold); font-size: 34px; }
@@ -851,14 +842,35 @@
 
     /* ─── Qué vas a lograr ───────────────────────────────────── */
     #logros {
-      padding: 100px 0;
-      background: var(--bg-alt);
+      padding: 96px 24px;
+      background: #0d0b08;
+    }
+
+    .logros-container {
+      max-width: 940px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .logros-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem,4vw,3rem);
+      font-weight: 300;
+      line-height: 1.12;
+      color: var(--cream);
+      margin: 24px 0 48px;
+    }
+
+    .logros-title em {
+      color: var(--gold);
+      font-style: italic;
     }
 
     .logros-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0 48px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      text-align: left;
     }
 
     .logro-item {
@@ -868,6 +880,65 @@
       font-family: 'DM Sans', sans-serif;
       font-size: 0.95rem;
       line-height: 1.5;
+      transition: background 0.25s, border-color 0.25s, transform 0.25s;
+    }
+
+    .logro-item:hover {
+      background: rgba(175, 150, 96, 0.07);
+      border-color: rgba(175, 150, 96, 0.8);
+      transform: translateY(-2px);
+    }
+
+    #por-que-nace {
+      padding: 96px 24px;
+      background: #111111;
+    }
+
+    .origen-container {
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .origen-container .section-label {
+      margin-bottom: 24px;
+    }
+
+    .origen-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.9rem,3.5vw,2.9rem);
+      color: var(--cream);
+      font-weight: 300;
+      line-height: 1.12;
+      margin-bottom: 40px;
+    }
+
+    .origen-title em {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .origen-copy {
+      border-left: 3px solid var(--gold);
+      padding-left: 32px;
+      text-align: left;
+    }
+
+    .origen-copy p {
+      color: rgba(221,209,204,0.8);
+      font-weight: 300;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .origen-copy .origen-quote {
+      font-family: var(--font-display);
+      font-style: italic;
+      color: var(--cream);
+      font-size: clamp(1.35rem,2.7vw,1.8rem);
+      line-height: 1.45;
+      margin-bottom: 0;
     }
 
     /* ─── Carrusel ───────────────────────────────────────────── */
@@ -894,6 +965,7 @@
     .carousel-wrapper {
       overflow: hidden;
       flex: 1;
+      touch-action: pan-y;
     }
 
     .carousel-track {
@@ -904,11 +976,13 @@
     .carousel-slide {
       flex: 0 0 calc(100% / 3);
       aspect-ratio: 4/5;
-      background: var(--brown);
+      background: #0f0f0f;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 8px;
+      overflow: hidden;
+      border: 1px solid rgba(175,150,96,0.12);
     }
 
     .carousel-slide span {
@@ -924,6 +998,12 @@
       height: 100%;
       object-fit: cover;
       display: block;
+      transition: transform 0.45s ease, filter 0.45s ease;
+    }
+
+    .carousel-slide:hover img {
+      transform: scale(1.035);
+      filter: brightness(1.04);
     }
 
     .carousel-btn {
@@ -943,6 +1023,8 @@
 
     .carousel-btn:hover {
       background: rgba(175,150,96,0.1);
+      border-color: var(--gold);
+      box-shadow: 0 0 20px rgba(175,150,96,0.14);
     }
 
     /* ─── Testimonios ────────────────────────────────────────── */
@@ -953,7 +1035,7 @@
 
     .testimonios-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(6, 1fr);
       gap: 24px;
     }
 
@@ -961,6 +1043,16 @@
       border: 1px solid rgba(175,150,96,0.2);
       overflow: hidden;
       aspect-ratio: 4/5;
+      grid-column: span 2;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+
+    .testimonio-card:nth-child(4) {
+      grid-column: 2 / span 2;
+    }
+
+    .testimonio-card:nth-child(5) {
+      grid-column: 4 / span 2;
     }
 
     .testimonio-card img {
@@ -973,6 +1065,11 @@
 
     .testimonio-card img:hover {
       transform: scale(1.03);
+    }
+
+    .testimonio-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
     }
 
     /* ─── Eyebrow alias ─────────────────────────────────────── */
@@ -990,10 +1087,9 @@
     /* ─── Pamela bio extras ──────────────────────────────────── */
     .pamela-lista {
       list-style: none;
-      margin: 12px 0 16px 0;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
+      margin: 18px 0 20px 0;
+      display: grid;
+      gap: 8px;
     }
 
     .pamela-lista li {
@@ -1001,18 +1097,51 @@
       font-weight: 300;
       color: rgba(221,209,204,0.8);
       line-height: 1.5;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .pamela-lista li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.65em;
+      width: 7px;
+      height: 7px;
+      border: 1px solid var(--gold);
+      transform: rotate(45deg);
     }
 
     .pamela-quote {
-      border-top: 1px solid rgba(175,150,96,0.3);
-      border-bottom: 1px solid rgba(175,150,96,0.3);
-      padding: 24px 0;
-      margin: 20px 0;
+      border-top: 1px solid rgba(175,150,96,0.35);
+      border-bottom: 1px solid rgba(175,150,96,0.35);
+      padding: 30px 20px;
+      margin: 28px 0;
       font-family: var(--font-display);
       font-style: italic;
-      font-size: clamp(15px, 1.6vw, 18px);
+      font-size: clamp(18px, 1.8vw, 24px);
       color: var(--cream);
       line-height: 1.6;
+      text-align: center;
+      position: relative;
+    }
+
+    .pamela-quote::before,
+    .pamela-quote::after {
+      color: var(--gold);
+      font-size: 34px;
+      line-height: 0;
+      opacity: 0.75;
+    }
+
+    .pamela-quote::before {
+      content: '"';
+      margin-right: 6px;
+    }
+
+    .pamela-quote::after {
+      content: '"';
+      margin-left: 6px;
     }
 
     /* ─── Precio badge ───────────────────────────────────────── */
@@ -1092,6 +1221,51 @@
       max-height: 400px;
     }
 
+    #bienvenida {
+      padding: 96px 24px;
+      background: var(--bg);
+    }
+
+    .bienvenida-container {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .bienvenida-kicker {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .bienvenida-kicker span:not(.section-label) {
+      display: block;
+      width: 48px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .bienvenida-kicker .section-label {
+      margin-bottom: 0;
+    }
+
+    .bienvenida-video {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      border: 1px solid rgba(175,150,96,0.5);
+      background: #111;
+      overflow: hidden;
+    }
+
+    .bienvenida-video video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     /* ─── CTA Final ──────────────────────────────────────────── */
     #cta-final {
       padding: 120px 0;
@@ -1117,10 +1291,19 @@
       font-family: var(--font-display);
       font-size: clamp(36px, 5vw, 64px);
       font-weight: 300;
-      font-style: italic;
       line-height: 1.25;
       color: var(--cream);
       margin-bottom: 24px;
+    }
+
+    .cta-final-headline span {
+      display: block;
+    }
+
+    .cta-final-headline span:last-child {
+      color: var(--gold);
+      font-size: 0.92em;
+      font-style: italic;
     }
 
     .cta-final-sub {
@@ -1173,35 +1356,42 @@
       }
 
       .hero-text {
-        padding: 40px 24px;
-        max-width: 100%;
-        margin: 0;
+        padding: 56px 24px 44px;
+        max-width: 680px;
+        margin: 0 auto;
       }
 
       .hero-photo {
-        height: auto;
+        height: clamp(360px, 68vw, 560px);
         min-height: 0;
       }
 
       .hero-photo img {
-        height: auto;
-        object-fit: contain;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
       }
 
       .hero-photo::after {
-        background: linear-gradient(to bottom, #080808 0%, transparent 20%);
+        background: linear-gradient(to bottom, #080808 0%, transparent 22%);
       }
 
-      .aprender-grid {
-        grid-template-columns: 1fr;
+      #para-quien,
+      #pamela,
+      #programa,
+      #carrusel,
+      #testimonios,
+      #precio,
+      #faq,
+      #logros,
+      #por-que-nace,
+      #bienvenida {
+        padding-top: 72px;
+        padding-bottom: 72px;
       }
 
-      .aprender-item:nth-child(2n) {
-        border-right: 1px solid rgba(175,150,96,0.1);
-      }
-
-      .aprender-item:nth-last-child(1) {
-        border-bottom: none;
+      #cta-final {
+        padding: 84px 0;
       }
 
       .pamela-grid {
@@ -1222,13 +1412,6 @@
         padding: 40px 24px;
       }
 
-      .floating-bar {
-        flex-direction: column;
-        gap: 12px;
-        text-align: center;
-        padding: 16px 24px 24px;
-      }
-
       nav {
         padding: 0 20px;
       }
@@ -1239,19 +1422,226 @@
         padding: 32px 24px;
       }
 
-      .cards-grid {
+      .cards-grid,
+      .logros-grid {
         grid-template-columns: 1fr;
       }
 
-      .logros-grid {
-        grid-template-columns: 1fr;
+      .testimonios-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .testimonio-card,
+      .testimonio-card:nth-child(4),
+      .testimonio-card:nth-child(5) {
+        grid-column: auto;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 24px;
+      }
+
+      .hero-headline {
+        font-size: clamp(42px, 12vw, 62px);
+      }
+
+      .hero-badges {
+        gap: 8px;
+      }
+
+      .badge {
+        font-size: 9px;
+        letter-spacing: 0.12em;
+        padding: 6px 10px;
       }
 
       .carousel-slide {
         flex: 0 0 100%;
       }
 
+      .carousel {
+        gap: 10px;
+      }
+
+      .carousel-btn {
+        width: 44px;
+        height: 44px;
+      }
+
+      .origen-copy {
+        padding-left: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 18px;
+      }
+
+      nav {
+        height: 76px;
+        padding: 0 16px;
+      }
+
+      .nav-logo-frame,
+      .logo-img,
+      .footer-logo-img {
+        width: 112px;
+        min-width: 112px;
+      }
+
+      .btn {
+        font-size: 10px;
+        letter-spacing: 0.16em;
+        padding: 11px 16px;
+      }
+
+      .btn-lg {
+        width: 100%;
+        text-align: center;
+        padding: 16px 20px;
+      }
+
+      #hero {
+        padding-top: 76px;
+      }
+
+      .hero-text {
+        padding: 40px 18px 34px;
+      }
+
+      .hero-brand {
+        font-size: 9px;
+        letter-spacing: 0.22em;
+        gap: 10px;
+      }
+
+      .hero-brand::before {
+        width: 24px;
+      }
+
+      .hero-headline {
+        font-size: clamp(38px, 13vw, 50px);
+      }
+
+      .hero-subtitle {
+        font-size: 15px;
+      }
+
+      .hero-claim {
+        font-size: 14px;
+        margin: 22px 0 28px;
+      }
+
+      .hero-badges {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero-badges::after {
+        grid-column: 1 / -1;
+      }
+
+      .badge {
+        text-align: center;
+      }
+
+      .hero-photo {
+        height: 420px;
+      }
+
+      #para-quien,
+      #pamela,
+      #programa,
+      #carrusel,
+      #testimonios,
+      #precio,
+      #faq,
+      #logros,
+      #por-que-nace,
+      #bienvenida {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+
+      .section-header {
+        margin-bottom: 42px;
+      }
+
+      .section-label,
+      .eyebrow {
+        font-size: 9px;
+        letter-spacing: 0.2em;
+      }
+
+      .section-title,
+      .logros-title,
+      .origen-title {
+        font-size: clamp(30px, 10vw, 40px);
+      }
+
+      .card-quien,
+      .modulo-card {
+        padding: 28px 22px;
+      }
+
+      .logros-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .logro-item {
+        font-size: 0.9rem;
+        padding: 14px 16px;
+      }
+
+      .pamela-photo img,
+      .pamela-photo-placeholder {
+        height: 300px;
+      }
+
+      .pamela-stats {
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .pamela-quote {
+        padding: 24px 0;
+        font-size: 18px;
+      }
+
+      .origen-copy {
+        padding-left: 18px;
+      }
+
       .testimonios-grid {
         grid-template-columns: 1fr;
+      }
+
+      .precio-card {
+        padding: 34px 18px;
+      }
+
+      .precio-includes {
+        padding: 24px 18px;
+      }
+
+      .faq-question {
+        font-size: 14px;
+        line-height: 1.35;
+        padding: 20px 0;
+      }
+
+      .bienvenida-kicker {
+        gap: 10px;
+      }
+
+      .bienvenida-kicker span:not(.section-label) {
+        width: 28px;
+      }
+
+      .cta-final-headline {
+        font-size: clamp(34px, 12vw, 46px);
       }
     }
