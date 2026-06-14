@@ -20,6 +20,9 @@ dist-ssr
 .wrangler/
 .dev.vars
 
+# Large media files (host on CDN)
+public/*.mp4
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

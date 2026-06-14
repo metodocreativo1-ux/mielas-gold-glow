@@ -23,7 +23,7 @@ export function Precio() {
         <div className="mt-10 border-y border-white/10 py-8 text-left space-y-3">
           {includes.map((i) => (
             <div key={i} className="flex gap-3 items-start">
-              <span className="text-gold mt-0.5">✦</span>
+              <span className="text-gold mt-0.5">·</span>
               <span className="text-cream/80 font-light text-sm">{i}</span>
             </div>
           ))}

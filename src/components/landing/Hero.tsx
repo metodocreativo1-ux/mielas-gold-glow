@@ -20,12 +20,6 @@ export function Hero() {
             Una formación diseñada para estilistas que quieren dejar de improvisar el color y empezar a comprender el cabello, la química y la lógica detrás de cada resultado.
           </p>
 
-          <div className="mt-10 border-y border-white/10 py-6 flex items-baseline gap-4">
-            <span className="text-cream/40 line-through text-sm">$900.000 ARS</span>
-            <span className="font-display text-5xl text-gold">$600.000</span>
-            <span className="text-tan text-xs tracking-[0.3em] uppercase">ARS</span>
-          </div>
-
           <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-xs tracking-[0.2em] uppercase text-tan">
             <span>7 Módulos</span><span className="text-gold/40">·</span>
             <span>Bonus alisado</span><span className="text-gold/40">·</span>
@@ -37,7 +31,7 @@ export function Hero() {
             href="#precio"
             className="mt-10 inline-flex items-center gap-3 bg-gold text-ink hover:bg-cream transition-colors gold-glow px-8 py-4 text-xs tracking-[0.3em] uppercase font-medium"
           >
-            Reservar mi lugar
+            Comprar curso
             <span className="text-base">→</span>
           </a>
         </div>

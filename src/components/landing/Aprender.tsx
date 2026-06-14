@@ -18,7 +18,7 @@ export function Aprender() {
       <div className="mt-16 grid md:grid-cols-2 gap-x-16 gap-y-8">
         {items.map((text, i) => (
           <div key={i} className="flex gap-5 border-b border-white/5 pb-6">
-            <span className="text-gold text-2xl leading-none mt-0.5">✨</span>
+            <span className="text-gold text-xl leading-none mt-0.5">·</span>
             <p className="text-cream/85 font-display text-xl md:text-2xl leading-snug">{text}</p>
           </div>
         ))}

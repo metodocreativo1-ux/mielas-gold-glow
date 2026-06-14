@@ -25,7 +25,7 @@ export function CTAFinal() {
           href="#precio"
           className="mt-10 inline-flex items-center justify-center gap-3 bg-gold text-ink hover:bg-cream transition-colors gold-glow px-12 py-5 text-xs tracking-[0.3em] uppercase font-medium"
         >
-          Quiero formar parte →
+          QUIERO INSCRIBIRME
         </a>
       </div>
     </section>

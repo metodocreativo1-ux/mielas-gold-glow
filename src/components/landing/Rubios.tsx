@@ -1,6 +1,6 @@
 import { SectionHeader } from "./SectionHeader";
 
-const photos = [1, 2, 3, 4, 5];
+const photos = [1, 2, 5];
 
 export function Rubios() {
   return (
