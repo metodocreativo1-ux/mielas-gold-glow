@@ -192,7 +192,7 @@
       margin: 0 auto;
       position: relative;
       z-index: 2;
-      animation: heroIn 0.7s ease-out both;
+      animation: none;
     }
 
     .hero-brand {
