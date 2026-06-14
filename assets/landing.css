@@ -1179,8 +1179,13 @@
       }
 
       .hero-photo {
-        height: 70vw;
-        min-height: 320px;
+        height: auto;
+        min-height: 0;
+      }
+
+      .hero-photo img {
+        height: auto;
+        object-fit: contain;
       }
 
       .hero-photo::after {
